@@ -1,0 +1,147 @@
+:root{
+    --defaultTextSize: 2;
+    --textColor: white;
+    --primaryColor: #3F2A5C;
+    --secondaryColor: #634191;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1F152D;
+    color: white;
+}
+
+main{
+    margin-top: 4.9vw;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5vw;
+    background-color: var(--primaryColor);
+    border-bottom: 0.3vw solid #ffffff;
+    z-index: 9999;
+}
+
+nav ul.menu-options{
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    background-color:var(--primaryColor);
+    width: 40%;
+    height: 100vh;
+    max-width: 225px;
+    display: block;
+    transition: .5s;
+    border-right: 0.3vw solid #ffffff;
+}
+
+nav ul.menu-options li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+
+nav ul.menu-options a {
+    font-size: calc(var(--defaultTextSize) * 1vw);
+    text-decoration: none;
+    padding: 1.4vw;
+    color: white;
+}
+
+nav ul.menu-options li::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+nav ul.menu-options li:hover:after{
+    width: 80%;
+    background-color: var(--secondaryColor);
+}
+
+
+.menu-options.active-nav{
+    left: 0%;
+}
+
+.active{
+    background-color: var(--secondaryColor);
+    padding: 15px 0px 10px 0px;
+}
+
+.openMenuBtn{
+    cursor:pointer;
+    float: left;
+    font-size: calc(var(--defaultTextSize) * 1.3vw);
+    margin: 1vw;
+}
+
+.closeMenuBtn{
+    position: absolute;
+    cursor:pointer;
+    right: 1vw;
+    margin: 0vw 1vw 1vw 0vw;
+    font-size: calc(var(--defaultTextSize) * 1vw);
+}
+nav .navLogo{
+    width: 4%;
+    border: white solid 3px;
+    border-radius: 1000%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav h2.siteName{
+    display: flex;
+    justify-content: center;
+    font-family: "Arial black";
+    font-size: 3vw;
+    align-items: center;
+}
+
+nav .accessibility{
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(var(--defaultTextSize) * 1.6vw);
+    cursor: pointer;
+}
+
+.homeWelcome{
+    position: relative;
+    margin: 10vw 0vw 8vw 3vw;
+}
+
+.homeWelcomeMain{
+    font-family: 'arial black';
+    font-size: calc(var(--defaultTextSize) * 1.6vw);
+}
+
+.homeWelcomeSub{
+    font-family: 'arial light';
+    width: 70%;
+    font-size: calc(var(--defaultTextSize) * 1.4vw)
+}
+
+
+.melodyPic{
+    width: 20%;
+    border: #ffffff solid 5px;
+    border-radius: 30px;
+}
+
